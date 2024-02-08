@@ -45,5 +45,81 @@ a
 	&:hover, &:focus
 		color: $accent
 
-// ALWAYS END
-@import media
+.top-line
+	background-color: $dark
+	position: relative
+	height: 65px
+
+.logo
+	font-family: baron-g,sans-serif
+	color: #fff
+	font-size: 23px
+	display: inline-block
+	text-decoration: none
+	position: absolute
+	padding-left: 30px
+	left: 0
+	line-height: 65px
+	&:hover,&:focus-visible
+		text-decoration: none
+		color: #fff
+	span
+		color: $accent
+
+.main-menu
+	padding: 0 100px
+	width: 100%
+	text-align: center
+	ul,li
+		list-style-type: none
+		padding: 0
+		margin: 0
+	li
+		display: inline-block
+		margin-right: -4px
+		&.active
+			a
+				color: #fff
+				background-color: lighten($dark, 5%)
+		&:hover
+			a
+				color: #fff
+				background-color: lighten($dark, 8%)
+
+	a
+		color: #d1d9e0
+		text-decoration: none
+		text-transform: uppercase
+		font-size: 16px
+		font-weight: bold
+		padding: 0 15px
+		line-height: 65px
+		display: block
+		transition: color .25s ease, backround-color .25s ease
+
+.search-wrap
+.search
+	position: absolute
+	padding:
+	right: 30px
+	left: 10px
+	// right: 0
+	color: #5c6470
+	cursor: pointer
+	line-height: 65px
+	text-align: center
+	transition: color .25s ease
+	&:hover
+		color: lighten(#5c6470, 10%)
+.search-field
+	position: absolute
+	left: 0
+	top: 65px
+	padding: 15px
+	background-color: lighten($dark, 3%)
+	width: 100%
+	border-top: lighten($dark, 5%) 1px solid
+	z-index: 4
+
+	// ALWAYS END
+// @import media
