@@ -28,5 +28,7 @@ $(function () {
 		$('.mobile-menu').stop().slideToggle();
 	});
 
+	var likely = require('ilyabirman-likely');
+	likely.initiate();
 
 });

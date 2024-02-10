@@ -1,19 +1,19 @@
-let syntax     = 'sass', // Syntax - .sass or .scss
-		fileswatch = 'html,htm,txt,json,md,woff2' // List of files extensions for watching & hard reload
+let syntax = 'sass', // Syntax - .sass or .scss
+	fileswatch = 'html,htm,txt,json,md,woff2' // List of files extensions for watching & hard reload
 
 import pkg from 'gulp'
 const { src, dest, parallel, series, watch } = pkg
 
-import browserSync   from 'browser-sync'
-import gulpSass      from 'gulp-sass'
+import browserSync from 'browser-sync'
+import gulpSass from 'gulp-sass'
 import * as dartSass from 'sass'
-const  sass          = gulpSass(dartSass)
-import postCss       from 'gulp-postcss'
-import cssnano       from 'cssnano'
-import concat        from 'gulp-concat'
-import uglify        from 'gulp-uglify'
-import autoprefixer  from 'autoprefixer'
-import rsyncModule   from 'gulp-rsync'
+const sass = gulpSass(dartSass)
+import postCss from 'gulp-postcss'
+import cssnano from 'cssnano'
+import concat from 'gulp-concat'
+import uglify from 'gulp-uglify'
+import autoprefixer from 'autoprefixer'
+import rsyncModule from 'gulp-rsync'
 
 function browsersync() {
 	browserSync.init({
@@ -30,12 +30,13 @@ function browsersync() {
 function scripts() {
 	return src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/likely/likely.js',
 		'app/js/common.js', // Always at the end
-		])
-	.pipe(concat('scripts.min.js'))
-	// .pipe(uglify()) // Mifify js (opt.)
-	.pipe(dest('app/js'))
-	.pipe(browserSync.stream())
+	])
+		.pipe(concat('scripts.min.js'))
+		// .pipe(uglify()) // Mifify js (opt.)
+		.pipe(dest('app/js'))
+		.pipe(browserSync.stream())
 }
 
 function styles() {

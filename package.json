@@ -20,5 +20,8 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "sass": "^1.69.5"
+  },
+  "dependencies": {
+    "ilyabirman-likely": "^3.2.0"
   }
 }

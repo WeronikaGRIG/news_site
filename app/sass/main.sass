@@ -160,5 +160,68 @@ a
 		padding: 0
 		line-height: 45px
 
-		// ALWAYS END
+.ad
+	text-align: center
+	width: 100%
+	display: block
+	overflow: hidden
+
+.top-ad
+	margin-bottom: $gutter
+
+.container-fluid
+	max-width: 1346px
+	padding: 0 $gutter
+
+section
+	background-color: #fafafa
+	padding-top: $gutter
+	padding-bottom: $gutter
+	h2
+		text-transform: uppercase
+		margin: 0
+		font-size: 23px
+		font-weight: 800
+
+.item-title
+	min-height: 340px
+	&-content
+		position: absolute
+		bottom: 0
+		color: #fff
+		padding: 40px
+		z-index: 1
+		h3
+			margin: 0
+			text-transform: uppercase
+			font-weight: 800
+			line-height: 1.25
+			font-size: 19px
+			a
+				color: #fff
+
+.pattern
+	background-color: $dark
+	position: relative
+	display: block
+	&::before
+		content: ''
+		transition: opacity .25s ease, top .25s ease, left .25s ease, botton .25s ease, right .25s ease
+		z-index: 1
+		position: absolute
+		border: #fff solid 1px
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		opacity: 0
+	&:hover
+		&::before
+			opacity: 0.2
+			top: 10px
+			right: 10px
+			bottom: 10px
+			left: 10px
+
+				// ALWAYS END
 @import media
