@@ -31,6 +31,7 @@ body
 	display: block
 	max-width: 100%
 	height: auto
+	margin: 20px 0
 	&.img-width
 		width: 100%
 
@@ -41,7 +42,8 @@ b, strong
 	font-weight: bold
 
 a
-	color: $accent
+	color: #fff
+	text-decoration: none
 	&:hover, &:focus
 		color: $accent
 
@@ -199,6 +201,9 @@ section
 			font-size: 19px
 			a
 				color: #fff
+				text-decoration: none
+				&:hover
+					text-decoration: underline
 
 .pattern
 	background-color: $dark
@@ -222,6 +227,80 @@ section
 			right: 10px
 			bottom: 10px
 			left: 10px
+		.overlay
+			&::before
+				opacity: .75
 
-				// ALWAYS END
+.overlay
+	background-size: cover
+	background-position: center
+	position: relative
+	display: block
+	&::before
+		content: ''
+		background-color: $dark
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		opacity: .55
+		transition: opacity .25s ease
+	&:hover
+		&::before
+			opacity: .75
+
+.item-social
+	margin-top: 10px
+	.fa
+		font-size: 12px
+		margin-right: 5px
+
+.item-comments
+	display: inline-block
+	margin-right: 10px
+	&-count
+		font-size: 12px
+		display: inline-block
+		position: relative
+		margin-left: 10px
+		&::after
+			content: '\229A'
+			color: #fff
+			font-size: 10px
+			font-weight: 800
+			// top: 35%
+			margin-left: 10px
+			// margin-right: 10px
+			// position: absolute
+			opacity: 0.60
+
+.likely-custom
+	display: inline-block
+	font-size: 12px
+.likely__widget
+	padding-left: 15px
+	color: #fff
+	padding: 0 4px 0 3px
+	position: relative
+	cursor: pointer
+	margin: 6px 2px 0
+	border: 1px solid #fff
+	border-radius: 2px
+	text-decoration: none
+.likely__counter
+	display: none
+svg
+	width: 11px
+	height: auto
+	// position: absolute
+	// top: 3.5px
+	// left: 4px
+	margin-right: 5px
+	path
+		fill: #fff
+>*
+	display: inline-block
+
+	// ALWAYS END
 @import media
