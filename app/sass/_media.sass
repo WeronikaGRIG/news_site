@@ -9,14 +9,26 @@
 
 // ≥992px
 +media-breakpoint-down(lg)
-    .main-menu
-        display: none
-        padding: 20px
+.main-menu
+    display: none
+    padding: 20px
     .mobile-menu-button
         display: block
 
+.item-title
+    &-content
+        padding: 40px 30px
+
 // ≥768px
 +media-breakpoint-down(md)
+    .first-section
+        top: math.div($gutter, 2)
+        bottom: math.div($gutter, 2)
+    .container-fluid
+        padding: 0 math.div($gutter, 2)
+
+    .top-ad
+        padding-bottom: math.div($gutter, 2)
 
 // ≥576px
 +media-breakpoint-down(sm)
